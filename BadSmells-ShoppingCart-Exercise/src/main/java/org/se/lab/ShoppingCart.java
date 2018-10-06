@@ -1,7 +1,6 @@
 package org.se.lab;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 class ShoppingCart
 {
@@ -11,55 +10,51 @@ class ShoppingCart
 	
 	public String toString()
 	{
-		String s = "Cart: " + id + "\n";
-		for(Iterator it = articles.iterator(); it.hasNext();)
-		{
-			Article a = (Article)it.next();	
-			switch(a.getType())
-			{
-				case BOOK:
-					s += "BOOK:\t" + a.getId() + "\t" + a.getDescription() + "\t" + a.getAuthor() + "\t" + a.getPrice() + "\n";
-				break;
-				
-				case CD:
-					s += "CD:\t" + a.getId() + "\t" + a.getDescription() + "\t" + a.getPrice() + "\n";
-				break;
-				
-				case DVD:
-					s += "DVD:\t" + a.getId() + "\t" + a.getDescription() + "\t" + a.getPrice() + "\n";
-				break;
-			}
-		}		
-		return s;
+		StringBuilder s = new StringBuilder("Cart: " + id + "\n");
+        for (Object article : articles) {
+            Article a = (Article) article;
+            switch (a.getType()) {
+                case BOOK:
+                    s.append("BOOK:\t").append(a.getId()).append("\t").append(a.getDescription()).append("\t").append(a.getAuthor()).append("\t").append(a.getPrice()).append("\n");
+                    break;
+
+                case CD:
+                    s.append("CD:\t").append(a.getId()).append("\t").append(a.getDescription()).append("\t").append(a.getPrice()).append("\n");
+                    break;
+
+                case DVD:
+                    s.append("DVD:\t").append(a.getId()).append("\t").append(a.getDescription()).append("\t").append(a.getPrice()).append("\n");
+                    break;
+            }
+        }
+		return s.toString();
 	}
 	
 	
 	public String toXml()
 	{
-		String xml = "<shoppingcard id=\"" + id + "\">\n";
-		for(Iterator it = articles.iterator(); it.hasNext();)
-		{
-			Article a = (Article)it.next();	
-			switch(a.getType())
-			{
-				case BOOK:
-					xml += "\t<book id=\"" + a.getId() + "\" description=\"" + a.getDescription()
-							+ "\" price=\"" + a.getPrice()
-							+ "\" author=\"" + a.getAuthor() + "\"/>\n";
-				break;
-				
-				case CD:
-					xml += "\t<cd id=\"" + a.getId() + "\" description=\"" + a.getDescription()
-						+ "\" price=\"" + a.getPrice() + "\"/>\n";
-				break;
-				
-				case DVD:
-					xml += "\t<dvd id=\"" + a.getId() + "\" description=\"" + a.getDescription()
-					+ "\" price=\"" + a.getPrice() + "\"/>\n";
-				break;
-			}
-		}				
-		xml += "</shoppingcard>";
-		return xml;
+		StringBuilder xml = new StringBuilder("<shoppingcard id=\"" + id + "\">\n");
+        for (Object article : articles) {
+            Article a = (Article) article;
+            switch (a.getType()) {
+                case BOOK:
+                    xml.append("\t<book id=\"").append(a.getId()).append("\" description=\"").append(a.getDescription()).append("\" price=\"").append(a.getPrice()).append("\" author=\"").append(a.getAuthor()).append("\"/>\n");
+                    break;
+
+                case CD:
+                    xml.append("\t<cd id=\"").append(a.getId()).append("\" description=\"").append(a.getDescription()).append("\" price=\"").append(a.getPrice()).append("\"/>\n");
+                    break;
+
+                case DVD:
+                    xml.append("\t<dvd id=\"").append(a.getId()).append("\" description=\"").append(a.getDescription()).append("\" price=\"").append(a.getPrice()).append("\"/>\n");
+                    break;
+            }
+        }
+		xml.append("</shoppingcard>");
+		return xml.toString();
 	}
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

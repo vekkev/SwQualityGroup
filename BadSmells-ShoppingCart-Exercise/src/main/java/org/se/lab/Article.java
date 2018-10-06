@@ -13,14 +13,6 @@ public class Article
 	public Article() {
 	}
 
-	public Article(int id, Type type, String description, String author, double price) {
-		this.id = id;
-		this.type = type;
-		this.string = description;
-		this.author = author;
-		this.price = price;
-	}
-
 	public int getId() {
 		return id;
 	}

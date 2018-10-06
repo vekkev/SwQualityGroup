@@ -23,6 +23,7 @@ public class ShoppingCartTest
 		cd.setDescription("Rolling Stones");
 		cd.setPrice(12.99);
 		cart.articles.add(cd);
+		cart.setId(0);
 		
 		Article book = new Article();
 		book.setType(Article.Type.BOOK);
@@ -31,6 +32,7 @@ public class ShoppingCartTest
 		book.setDescription("Refactoring");
 		book.setPrice(57.80);
 		cart.articles.add(book);
+        cart.setId(0);
 		
 		Article dvd = new Article();
 		dvd.setType(Article.Type.DVD);
@@ -38,6 +40,7 @@ public class ShoppingCartTest
 		dvd.setDescription("ACDC Live");
 		dvd.setPrice(24.90);
 		cart.articles.add(dvd);
+        cart.setId(0);
 	}
 	
 
