@@ -1,0 +1,16 @@
+Exercise: BadSmells + Refactoring
+---------------------------------------------------------------------
+
+Die vorliegenden Klassen "Article" und "ShoppingCart" weisen einige 
+Code Smells und schlechten Java Style auf.
+
+Versuchen Sie das Beispiel so umzubauen, dass diese Probleme im Code
+verschwinden. 
+
+Anmerkungen: 
+1. Es können am Ende mehr Klassen entstehen, die in einer klaren und 
+	erweiterbaren Struktur miteinander verbunden sind.
+	
+2. Das setup der Testklasse muss an die neue Struktur angepasst werden,
+	die @Test Methoden bleiben unverändert.
+			
