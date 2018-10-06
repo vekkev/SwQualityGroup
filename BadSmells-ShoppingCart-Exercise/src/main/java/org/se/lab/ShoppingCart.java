@@ -5,7 +5,7 @@ import java.util.ArrayList;
 class ShoppingCart
 {
 	private int id;
-	final ArrayList articles = new ArrayList();
+	final ArrayList<Article> articles = new ArrayList<>();
 
 	
 	public String toString()
