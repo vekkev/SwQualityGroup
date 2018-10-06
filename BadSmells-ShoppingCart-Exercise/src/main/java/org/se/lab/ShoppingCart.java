@@ -3,17 +3,10 @@ package org.se.lab;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ShoppingCart
+class ShoppingCart
 {
-	/*
-	 * Property: id
-	 */
-	public int id;
-	
-	/*
-	 * Property: articles
-	 */
-	public ArrayList articles = new ArrayList();
+	private int id;
+	final ArrayList articles = new ArrayList();
 
 	
 	public String toString()
@@ -22,18 +15,18 @@ public class ShoppingCart
 		for(Iterator it = articles.iterator(); it.hasNext();)
 		{
 			Article a = (Article)it.next();	
-			switch(a.type)
+			switch(a.getType())
 			{
 				case BOOK:
-					s += "BOOK:\t" + a.id + "\t" + a.description + "\t" + a.author + "\t" + a.price + "\n";
+					s += "BOOK:\t" + a.getId() + "\t" + a.getDescription() + "\t" + a.getAuthor() + "\t" + a.getPrice() + "\n";
 				break;
 				
 				case CD:
-					s += "CD:\t" + a.id + "\t" + a.description + "\t" + a.price + "\n";
+					s += "CD:\t" + a.getId() + "\t" + a.getDescription() + "\t" + a.getPrice() + "\n";
 				break;
 				
 				case DVD:
-					s += "DVD:\t" + a.id + "\t" + a.description + "\t" + a.price + "\n";
+					s += "DVD:\t" + a.getId() + "\t" + a.getDescription() + "\t" + a.getPrice() + "\n";
 				break;
 			}
 		}		
@@ -47,22 +40,22 @@ public class ShoppingCart
 		for(Iterator it = articles.iterator(); it.hasNext();)
 		{
 			Article a = (Article)it.next();	
-			switch(a.type)
+			switch(a.getType())
 			{
 				case BOOK:
-					xml += "\t<book id=\"" + a.id + "\" description=\"" + a.description 
-							+ "\" price=\"" + a.price  
-							+ "\" author=\"" + a.author + "\"/>\n";
+					xml += "\t<book id=\"" + a.getId() + "\" description=\"" + a.getDescription()
+							+ "\" price=\"" + a.getPrice()
+							+ "\" author=\"" + a.getAuthor() + "\"/>\n";
 				break;
 				
 				case CD:
-					xml += "\t<cd id=\"" + a.id + "\" description=\"" + a.description 
-						+ "\" price=\"" + a.price + "\"/>\n";
+					xml += "\t<cd id=\"" + a.getId() + "\" description=\"" + a.getDescription()
+						+ "\" price=\"" + a.getPrice() + "\"/>\n";
 				break;
 				
 				case DVD:
-					xml += "\t<dvd id=\"" + a.id + "\" description=\"" + a.description 
-					+ "\" price=\"" + a.price + "\"/>\n";
+					xml += "\t<dvd id=\"" + a.getId() + "\" description=\"" + a.getDescription()
+					+ "\" price=\"" + a.getPrice() + "\"/>\n";
 				break;
 			}
 		}				

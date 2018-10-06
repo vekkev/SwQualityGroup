@@ -18,26 +18,26 @@ public class ShoppingCartTest
 		cart = new ShoppingCart();
 		
 		Article cd = new Article();
-		cd.type = Article.Type.CD;
-		cd.id = 1;
-		cd.description = "Rolling Stones";
-		cd.price = 12.99;
+		cd.setType(Article.Type.CD);
+		cd.setId(1);
+		cd.setDescription("Rolling Stones");
+		cd.setPrice(12.99);
 		cart.articles.add(cd);
 		
 		Article book = new Article();
-		book.type = Article.Type.BOOK;
-		book.id = 7;
-		book.author = "Martin Fowler";
-		book.description = "Refactoring";
-		book.price = 57.80;
+		book.setType(Article.Type.BOOK);
+		book.setId(7);
+		book.setAuthor("Martin Fowler");
+		book.setDescription("Refactoring");
+		book.setPrice(57.80);
 		cart.articles.add(book);
 		
 		Article dvd = new Article();
-		dvd.type = Article.Type.DVD;
-		dvd.id = 13;
-		dvd.description = "ACDC Live";
-		dvd.price = 24.90;		
-		cart.articles.add(dvd);		
+		dvd.setType(Article.Type.DVD);
+		dvd.setId(13);
+		dvd.setDescription("ACDC Live");
+		dvd.setPrice(24.90);
+		cart.articles.add(dvd);
 	}
 	
 
