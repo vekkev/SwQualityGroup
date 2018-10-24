@@ -1,2 +1,7 @@
 Bad Smells found:
 
++Temporary field
+
+
+
+-fixed code through "Inspect Code"
