@@ -2,6 +2,8 @@ package org.se.lab;
 
 import java.util.ArrayList;
 
+//testkommentar
+
 class ShoppingCart
 {
 	private int id;
