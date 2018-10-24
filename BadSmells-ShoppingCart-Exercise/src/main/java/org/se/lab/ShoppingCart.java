@@ -2,7 +2,7 @@ package org.se.lab;
 
 import java.util.ArrayList;
 
-//testkommentarff
+
 
 class ShoppingCart
 {
