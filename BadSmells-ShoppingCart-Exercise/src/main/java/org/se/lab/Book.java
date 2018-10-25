@@ -20,4 +20,18 @@ public class Book extends Article{
     public void setAuthor(String author) {
         this.author = author;
     }
+
+    @Override
+    public String toString() {
+            StringBuilder builder = new StringBuilder();
+            builder.append("BOOK:\t");
+            builder.append(getId());
+            builder.append("\t").append(getDescription());
+            builder.append("\t").append(getAuthor());
+            builder.append("\t").append(getPrice());
+            builder.append("\n");
+
+            return builder.toString();
+        }
+
 }

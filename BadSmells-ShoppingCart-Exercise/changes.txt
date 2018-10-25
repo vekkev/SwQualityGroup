@@ -4,8 +4,8 @@ Bad Smells found:
                     which inhareted from Article
                     adapted the ShoppingCart Test
 
-+ switch-case  -> Treatment:
++ Switch-Case           -> Treatment: the output generation is extracted in a toString method in the separated classes
+(toString and toXML)
 
 
-
--fixed code through "Inspect Code"
++ fixed code through "Inspect Code" function from IntelliJ

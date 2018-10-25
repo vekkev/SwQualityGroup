@@ -16,8 +16,6 @@ public class Article
 		this.price = price;
 	}
 
-	public Article() {
-	}
 
 	public int getId() {
 		return id;
@@ -27,13 +25,6 @@ public class Article
 		this.id = id;
 	}
 
-//	public Type getType() {
-//		return type;
-//	}
-//
-//	public void setType(Type type) {
-//		this.type = type;
-//	}
 
 	public String getDescription() {
 		return string;
@@ -44,14 +35,6 @@ public class Article
 	}
 
 
-//	public String getAuthor() {
-//		return author;
-//	}
-//
-//	public void setAuthor(String author) {
-//		this.author = author;
-//	}
-
 	public double getPrice() {
 		return price;
 	}
@@ -59,4 +42,16 @@ public class Article
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(id);
+        builder.append("\t").append(string);
+		builder.append("\t").append(price);
+		builder.append("\n");
+
+	    return builder.toString();
+    }
 }
