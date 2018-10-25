@@ -6,13 +6,14 @@ public class Article
 
 	private int id;
 	//private Type type;
-	private String string;
+	//private String description; // Bad Smell -> bad name convention
+	private String description;
 	//private String author;	// Temporary Field
 	private double price;
 
-	public Article(int id, String string, double price) {
+	public Article(int id, String description, double price) {
 		this.id = id;
-		this.string = string;
+		this.description = description;
 		this.price = price;
 	}
 
@@ -27,11 +28,11 @@ public class Article
 
 
 	public String getDescription() {
-		return string;
+		return description;
 	}
 
 	public void setDescription(String description) {
-		this.string = description;
+		this.description = description;
 	}
 
 
@@ -48,7 +49,7 @@ public class Article
     public String toString() {
         StringBuilder builder = new StringBuilder();
         builder.append(id);
-        builder.append("\t").append(string);
+        builder.append("\t").append(description);
 		builder.append("\t").append(price);
 		builder.append("\n");
 
@@ -59,7 +60,7 @@ public class Article
     public String toXML(){
 		StringBuilder builder = new StringBuilder();
 		builder.append("id=\"" + id + "\"");
-		builder.append(" ").append("description=\"" + string + "\"");
+		builder.append(" ").append("description=\"" + description + "\"");
 		builder.append(" ").append("price=\"" + price + "\"/>");
 		builder.append("\n");
 

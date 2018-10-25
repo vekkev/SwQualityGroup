@@ -17,17 +17,17 @@ public class ShoppingCartTest
 		
 		Article cd = new CD(1,"Rolling Stones", 12.99);
 
-		cart.articles.add(cd);
+		cart.add(cd);
 		cart.setId(0);
 		
 		Article book = new Book("Martin Fowler", 7, "Refactoring", 57.80);
 
-		cart.articles.add(book);
+		cart.add(book);
         cart.setId(0);
 		
 		Article dvd = new DVD(13, "ACDC Live", 24.90);
 
-		cart.articles.add(dvd);
+		cart.add(dvd);
         cart.setId(0);
 	}
 	

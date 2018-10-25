@@ -7,9 +7,17 @@ import java.util.ArrayList;
 class ShoppingCart
 {
 	private int id;
-	final ArrayList<Article> articles = new ArrayList<>();
+	//final ArrayList<Article> articles = new ArrayList<>();  //Bad Smell ??  -> Public Access
+	private ArrayList<Article> articles = new ArrayList<>();
 
-	
+	public ArrayList<Article> getArticles() {
+		return articles;
+	}
+
+	public void add(Article article){
+		articles.add(article);
+	}
+
 	public String toString()
 	{
 		StringBuilder s = new StringBuilder("Cart: " + id + "\n");

@@ -2,12 +2,17 @@ Bad Smells found:
 
 + fixed code through "Inspect Code" function from IntelliJ
 
-+ Temporary field  -> Treatment: extract class - created seperate classes for Book, CD, DVD
-                    which inhareted from Article
++ Temporary field  -> Treatment: extract class - created separate classes for Book, CD, DVD
+                    which inherited from Article
                     adapted the ShoppingCart Test
 
 + Switch-Case           -> Treatment: the output generation is extracted in a toString method in the separated classes
-                                       the output generation is extracted in a toXML method in the separated classes
-(toString and toXML)
+(toString and toXML)                  the output generation is extracted in a toXML method in the separated classes
+
++ Public Access at ArrayList -> Treatment: set ArrayList to private and added "add method" to the ShoppingCart class
+                                            to gain access from outside
+
++ Bad Name Convention (class article Line 9) ->Treatment: set String string to String description
+
 
 
