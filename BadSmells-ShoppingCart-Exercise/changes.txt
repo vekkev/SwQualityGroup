@@ -1,6 +1,9 @@
 Bad Smells found:
 
-+Temporary field
++ Temporary field  -> Treatment: extract class - created seperate classes for Book, CD, DVD
+                    which inhareted from Article
+
++ switch-case  -> Treatment:
 
 
 

@@ -2,13 +2,19 @@ package org.se.lab;
 
 public class Article
 {
-	enum Type {BOOK, CD, DVD}
+	//enum Type {BOOK, CD, DVD}
 
 	private int id;
-	private Type type;
+	//private Type type;
 	private String string;
-	private String author;	// Temporary Field
+	//private String author;	// Temporary Field
 	private double price;
+
+	public Article(int id, String string, double price) {
+		this.id = id;
+		this.string = string;
+		this.price = price;
+	}
 
 	public Article() {
 	}
@@ -21,13 +27,13 @@ public class Article
 		this.id = id;
 	}
 
-	public Type getType() {
-		return type;
-	}
-
-	public void setType(Type type) {
-		this.type = type;
-	}
+//	public Type getType() {
+//		return type;
+//	}
+//
+//	public void setType(Type type) {
+//		this.type = type;
+//	}
 
 	public String getDescription() {
 		return string;
@@ -37,13 +43,14 @@ public class Article
 		this.string = description;
 	}
 
-	public String getAuthor() {
-		return author;
-	}
 
-	public void setAuthor(String author) {
-		this.author = author;
-	}
+//	public String getAuthor() {
+//		return author;
+//	}
+//
+//	public void setAuthor(String author) {
+//		this.author = author;
+//	}
 
 	public double getPrice() {
 		return price;
