@@ -3,8 +3,6 @@ package org.se.lab;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.se.lab.Article;
-import org.se.lab.ShoppingCart;
 
 
 
@@ -17,28 +15,18 @@ public class ShoppingCartTest
 	{
 		cart = new ShoppingCart();
 		
-		Article cd = new Article();
-		cd.setType(Article.Type.CD);
-		cd.setId(1);
-		cd.setDescription("Rolling Stones");
-		cd.setPrice(12.99);
+		Article cd = new CD(1,"Rolling Stones", 12.99);
+
 		cart.articles.add(cd);
 		cart.setId(0);
 		
-		Article book = new Article();
-		book.setType(Article.Type.BOOK);
-		book.setId(7);
-		book.setAuthor("Martin Fowler");
-		book.setDescription("Refactoring");
-		book.setPrice(57.80);
+		Article book = new Book("Martin Fowler", 7, "Refactoring", 57.80);
+
 		cart.articles.add(book);
         cart.setId(0);
 		
-		Article dvd = new Article();
-		dvd.setType(Article.Type.DVD);
-		dvd.setId(13);
-		dvd.setDescription("ACDC Live");
-		dvd.setPrice(24.90);
+		Article dvd = new DVD(13, "ACDC Live", 24.90);
+
 		cart.articles.add(dvd);
         cart.setId(0);
 	}

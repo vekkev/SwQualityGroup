@@ -2,6 +2,7 @@ Bad Smells found:
 
 + Temporary field  -> Treatment: extract class - created seperate classes for Book, CD, DVD
                     which inhareted from Article
+                    adapted the ShoppingCart Test
 
 + switch-case  -> Treatment:
 
