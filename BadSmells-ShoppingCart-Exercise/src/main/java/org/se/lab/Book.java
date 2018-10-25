@@ -34,4 +34,17 @@ public class Book extends Article{
             return builder.toString();
         }
 
+    @Override
+    public String toXML() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("\t<book ");
+        builder.append("id=\"" + getId() + "\"");
+        builder.append(" ").append("description=\"" + getDescription() + "\"");
+        builder.append(" ").append("price=\"" + getPrice() + "\"");
+        builder.append(" ").append("author=\"" + getAuthor() + "\"/>");
+        builder.append("\n");
+
+        return builder.toString();
+
+    }
 }

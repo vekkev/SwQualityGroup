@@ -14,4 +14,10 @@ public class CD extends Article{
 
         return builder.toString();
     }
+
+
+    @Override
+    public String toXML(){
+        return "\t<cd " + super.toXML();
+    }
 }

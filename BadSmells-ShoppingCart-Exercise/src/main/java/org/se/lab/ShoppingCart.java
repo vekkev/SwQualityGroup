@@ -38,8 +38,10 @@ class ShoppingCart
 	public String toXml()
 	{
 		StringBuilder xml = new StringBuilder("<shoppingcard id=\"" + id + "\">\n");
-        for (Object article : articles) {
-            Article a = (Article) article;
+        for (Article article : articles) {
+           xml.append(article.toXML());
+
+// Bad Smell: Switch Case
 //            switch (a.getType()) {
 //                case BOOK:
 //                    xml.append("\t<book id=\"").append(a.getId()).append("\" description=\"").append(a.getDescription()).append("\" price=\"").append(a.getPrice()).append("\" author=\"").append(a.getAuthor()).append("\"/>\n");

@@ -54,4 +54,17 @@ public class Article
 
 	    return builder.toString();
     }
+
+
+    public String toXML(){
+		StringBuilder builder = new StringBuilder();
+		builder.append("id=\"" + id + "\"");
+		builder.append(" ").append("description=\"" + string + "\"");
+		builder.append(" ").append("price=\"" + price + "\"/>");
+		builder.append("\n");
+
+		return builder.toString();
+
+
+	}
 }

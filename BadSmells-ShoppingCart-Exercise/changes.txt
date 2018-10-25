@@ -1,11 +1,13 @@
 Bad Smells found:
 
++ fixed code through "Inspect Code" function from IntelliJ
+
 + Temporary field  -> Treatment: extract class - created seperate classes for Book, CD, DVD
                     which inhareted from Article
                     adapted the ShoppingCart Test
 
 + Switch-Case           -> Treatment: the output generation is extracted in a toString method in the separated classes
+                                       the output generation is extracted in a toXML method in the separated classes
 (toString and toXML)
 
 
-+ fixed code through "Inspect Code" function from IntelliJ

@@ -14,4 +14,9 @@ public class DVD extends Article {
 
         return builder.toString();
     }
+
+    @Override
+    public String toXML(){
+        return "\t<dvd " + super.toXML();
+    }
 }
