@@ -8,16 +8,11 @@ public class CD extends Article{
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("CD:\t");
-        builder.append(super.toString());
-
-        return builder.toString();
+        return "CD:\t" + super.toString();
     }
-
 
     @Override
     public String toXML(){
-        return "\t<cd " + super.toXML();
+        return "\t<cd " + super.toXML() + "/>\n";
     }
 }

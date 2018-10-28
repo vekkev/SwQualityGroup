@@ -8,15 +8,11 @@ public class DVD extends Article {
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("DVD:\t");
-        builder.append(super.toString());
-
-        return builder.toString();
+        return "DVD:\t" + super.toString();
     }
 
     @Override
     public String toXML(){
-        return "\t<dvd " + super.toXML();
+        return "\t<dvd " + super.toXML() + "/>\n";
     }
 }
