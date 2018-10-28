@@ -1,0 +1,33 @@
+Bad Smells found:
+
++ Unnecessary comments (Article.java, ShoppingCart.java)
+    -> Treatment: remove unnecessary comments
+
++ Public variables
+    -> Treatment: made variables private
+                  added getter/setter for variables
+
++ For loop (ShoppingCart.java)
+    -> Treatment: change into for each
+                  use StringBuilder instead of string concatenation inside a loop
+
++ fixed code through "Inspect Code" function from IntelliJ
+
++ Temporary field
+    -> Treatment: extract class - created separate classes for Book, CD, DVD
+                  which inherited from Article
+                  adapted the ShoppingCart Test
+
++ Switch-Case
+    -> Treatment: the output generation is extracted in a toString method in the separated classes
+                  the output generation is extracted in a toXML method in the separated classes
+
++ Public Access at ArrayList (ShoppingCart.java)
+    -> Treatment: set ArrayList to private and added "add method" to the ShoppingCart class
+                  to gain access from outside
+
++ Bad Name Convention (Article.java)
+    -> Treatment: set String string to String description
+
+
+
