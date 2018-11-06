@@ -1,8 +1,6 @@
 package org.se.lab;
 
-import java.util.Objects;
-
-abstract class Entity {
+public abstract class Entity {
     /*
      * Property: id:int
      */
@@ -24,11 +22,12 @@ abstract class Entity {
         return id;
     }
 
+
     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Entity) {
-            return Objects.equals(this.id, ((Entity) obj).id);
-        }
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Entity entity = (Entity) o;
+        return id == entity.id;
     }
 }
