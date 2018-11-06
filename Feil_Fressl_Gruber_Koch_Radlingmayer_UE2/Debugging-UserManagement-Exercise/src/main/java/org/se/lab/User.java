@@ -25,8 +25,9 @@ public class User
     public void setUsername(String username)
     {
         if(username == null)
-        	this.username = username;
-        throw new IllegalArgumentException();
+            throw new IllegalArgumentException();
+            this.username = username;
+
     }
     
     
@@ -42,7 +43,7 @@ public class User
     {
         if(password == null)
             throw new IllegalArgumentException();   
-        password = password;
+        this.password = password;
     }
     
     
@@ -61,8 +62,8 @@ public class User
         this.group = group;
     }
     
-    
-    public String toSting()
+    @Override
+    public String toString()
     {
         return getId() + "," + getUsername() + "," + getPassword();
     }

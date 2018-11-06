@@ -1,5 +1,6 @@
 package org.se.lab;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Group
@@ -34,7 +35,7 @@ public class Group
     /*
      * Association: ---[*]-> users:User
      */
-    private List<User> users;
+    private List<User> users = new ArrayList<>();
     public void addUser(User user)
     {
         if(user == null)
