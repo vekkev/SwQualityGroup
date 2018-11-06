@@ -1,0 +1,8 @@
+Exercise: Debugging
+---------------------------------------------------------------------
+
+Debuggen Sie den gegebenen Source Code mit Hilfe von Findbugs und 
+einem manuellen Review.
+
+Testen Sie den gefixten Code mit den gegebenen Testklassen "UserTest" 
+und "GroupTest".
