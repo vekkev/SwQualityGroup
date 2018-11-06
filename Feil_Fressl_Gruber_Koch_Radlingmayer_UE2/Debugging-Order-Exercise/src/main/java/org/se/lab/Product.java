@@ -50,11 +50,12 @@ class Product
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (super.equals(obj) && obj instanceof Product) {
-            Product proc = (Product) obj;
-            return (this.price == proc.price && this.desc.equals(proc.desc));
-        }
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Product product = (Product) o;
+        return price == product.price &&
+                Objects.equals(desc, product.desc);
     }
 }

@@ -51,14 +51,13 @@ class Order
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (super.equals(obj) && obj instanceof Order) {
-            Order ord = (Order) obj;
-            return (this.date == ord.date);
-        }
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Order order = (Order) o;
+        return Objects.equals(date, order.date);
     }
-
 
     @Override
     public int hashCode() {
