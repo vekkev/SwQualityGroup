@@ -77,13 +77,4 @@ public class OrderTest
 		
 		Assert.assertEquals(EXPECTED, order.toString());
 	}
-
-	@Test
-	public void testDate() {
-		GregorianCalendar date = new GregorianCalendar(2013,11,2)
-		order = new Order(1, date.getTime());
-
-		Assert.assertEquals();
-
-	}
 }
