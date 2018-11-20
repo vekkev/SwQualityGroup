@@ -1,0 +1,26 @@
+Exercise: Test Stub / ArticleService
+---------------------------------------------------------------------
+
+Um die Klasse "ArticleService" in Isolation testen zu können, soll ein 
+Test-Double (Stub) verwendet werden.
+
+
+1. Test Stub 
+---------------------------------------------------------------------
+Implementieren Sie einen Test-Stub für das Interface "ArticleTable", 
+nennen Sie die Klasse "test/ArticleTableStub".
+
+Sie brauchen nur jene Funktionalität zu implementieren, die für die
+gegebenen Tests notwendig sind.
+
+Testen Sie Ihre Implementierung mit der Klasse "ArticleServiceTestWithStub"
+
+
+
+2. Testing Error Handling Code 
+---------------------------------------------------------------------
+Es soll der Error-Handling Code in der Klasse "ArticleService" getestet
+werden.
+
+Erweitern Sie dazu den Test-Stub UND die Klasse "ArticleServiceTestWithStub".
+

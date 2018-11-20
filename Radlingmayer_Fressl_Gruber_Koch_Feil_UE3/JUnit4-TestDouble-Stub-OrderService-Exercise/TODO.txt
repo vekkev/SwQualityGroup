@@ -1,0 +1,14 @@
+Exercise: Test Stub / OrderService
+---------------------------------------------------------------------
+
+Um die Klasse "OrderService" in Isolation testen zu können, soll ein 
+Test-Double (Stub) verwendet werden - siehe "OrderServiceTest".
+
+Implementieren Sie einen Test-Stub für das Interface "OrderTable", 
+nennen Sie die Klasse "OrderTableStub".
+Sie brauchen nur jene Funktionalität zu implementieren, die für die
+gegebenen Tests notwendig sind.
+
+Beachten Sie, dass in diesem Beispiel auch das Error-Handling zu testen
+ist!
+

@@ -1,0 +1,10 @@
+Exercise: Refactor to Custom Asserts
+-------------------------------------------------------------------------------
+
+Implement custom asserts to compare Product, OrderLine and Order objects.
+
+Examples:
+	public static void assertEquals(Order expected, Order actual)
+	public static void assertEquals(OrderLine expected, OrderLine actual)
+	public static void assertEquals(Product expected, Product actual)
+
