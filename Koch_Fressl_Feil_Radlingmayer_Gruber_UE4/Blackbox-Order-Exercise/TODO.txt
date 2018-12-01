@@ -1,0 +1,27 @@
+Exercise: Black-Box Tests
+---------------------------------------------------------------------
+
+Testen Sie die Methoden der Klasse "Order" des gegebenen 
+Blackbox-Order Projekts:
+	
+	public class Order
+	{
+		public void setOrderId(String id);
+		public void addOrder(int quantity, long articleNr);
+	}
+	
+	
+Aus den Requirements geht hervor, dass der Parameter in den 
+folgenden Grenzen liegen sollen:
+		
+		id = [0-9]{2,10}
+	
+		quantity = [1,10]
+		articleNr = [0,10000]
+	
+Implementieren Sie alle Testfälle die Sie aus der Boundary Value
+Analysis bekommen in eigenen @Test Methoden.
+
+Achten Sie darauf, dass auch die Messages der Exceptions überprüft
+werden.
+		
