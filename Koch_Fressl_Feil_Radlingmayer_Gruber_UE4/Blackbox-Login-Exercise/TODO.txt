@@ -1,0 +1,40 @@
+Exercise: BlackBox Tests - LoginService
+---------------------------------------------------------------------
+
+1. Black-Box Tests 
+---------------------------------------------------------------------
+	Testen Sie die Methoden der Klasse "LoginService" des gegebenen 
+	Blackbox-Login-SUT Projekts:
+	
+	public class LoginService
+	{
+		public boolean login(String username, String password);
+	}
+	
+	
+	Aus den Requirements geht hervor, dass die Parameter in den 
+	folgenden Grenzen liegen sollen:
+		
+		username = [a-z]{4,8}
+	
+		password = [0-9a-z]{10,}
+	
+	Implementieren Sie die notwendigen Testfälle, die Sie aus der 
+	Boundary Value Analysis erhalten, in den beiden Klassen:
+
+		LoginUsernameTest
+
+		LoginPasswordTest
+	
+	Beachten Sie, dass das password beliebig lang sein kann (>= 10)
+	und aus zwei Char-Bereichen besteht.
+	
+	
+		
+2. Test Refactoring
+---------------------------------------------------------------------
+	Reduzieren Sie die Redundanzen im Test-Code:
+		- Helper Methoden
+		- Test Hierarchie
+		- Test-Case Map
+	    
