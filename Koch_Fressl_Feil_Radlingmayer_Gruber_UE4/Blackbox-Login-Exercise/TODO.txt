@@ -16,8 +16,33 @@ Exercise: BlackBox Tests - LoginService
 	folgenden Grenzen liegen sollen:
 		
 		username = [a-z]{4,8}
+
+		Length:
+		"aaaa", "zzzz" --> shortest, valid
+		"aaaaaaaa" "zzzzzzzz" --> longest, valid
+
+
+		"aaa" --> tooShort
+		"aaaaaaaaa" --> tooLong
+
+		"````" --> invalidLow
+		"{{{{" --> invalidHigh
 	
 		password = [0-9a-z]{10,}
+
+		Length:
+		"0000000000" "9999999999" "aaaaaaaaaa" "zzzzzzzzzz"--> shortest, valid
+		"000000000"  --> tooShort
+
+		Content
+		[0-9] / :
+		"//////////" --> invalidLow09
+		"::::::::::" --> invalidHigh09
+
+		[a-z] ` {
+		"``````````" --> invalidLowaz
+		"{{{{{{{{{{" --> invalidHighaz
+
 	
 	Implementieren Sie die notwendigen Testfälle, die Sie aus der 
 	Boundary Value Analysis erhalten, in den beiden Klassen:
