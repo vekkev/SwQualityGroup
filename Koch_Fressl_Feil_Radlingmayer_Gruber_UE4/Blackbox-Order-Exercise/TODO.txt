@@ -15,8 +15,20 @@ Aus den Requirements geht hervor, dass der Parameter in den
 folgenden Grenzen liegen sollen:
 		
 		id = [0-9]{2,10}
-	
-		quantity = [1,10]
+
+	    "00", "17", "99" --> shortestl, valid
+	    "0000000000" "9999999999" --> longest, valid
+
+	    "0" "9" --> tooShort
+	    "00000000000" "99999999999" --> tooLong
+
+	    "//" --> invalidLow
+	    "::" --> invalidHigh
+
+		quantity = [1,10]   ... -2 -1 0 | 1 2 3 4 5 6 7 8 9 | 10 11 ...
+
+
+
 		articleNr = [0,10000]
 	
 Implementieren Sie alle Testfälle die Sie aus der Boundary Value
