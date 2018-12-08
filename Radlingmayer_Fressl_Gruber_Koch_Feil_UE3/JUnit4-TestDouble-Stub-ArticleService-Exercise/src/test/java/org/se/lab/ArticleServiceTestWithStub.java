@@ -16,6 +16,8 @@ public class ArticleServiceTestWithStub
 	{
 		stub = new ArticleTableStub();
 		service = new ArticleService(stub);
+
+
 	}
 	
 	@Test
@@ -35,6 +37,23 @@ public class ArticleServiceTestWithStub
 	}
 
 	// TODO: public void testAddArticle_TableException()
+	@Test
+	public void testAddArticleTableException()
+	{
+		// setup
+		stub.exception = new TableException();
+		Article book = new Article(1, "Effective Java", 3495);
+
+		// exercise
+		try
+		{
+			service.addArticle(book);
+		}
+		catch(ServiceException e)
+		{
+			Assert.assertTrue(e.getCause() instanceof TableException);
+		}
+	}
 	
 	
 	@Test
@@ -54,7 +73,39 @@ public class ArticleServiceTestWithStub
 		Assert.assertEquals(3, number);		
 	}		
 	
-	// TODO: public void testNumberOfArticles_NullPointerException()	
+	// TODO: public void testNumberOfArticles_NullPointerException()
+	@Test
+	public void testNumberOfArticlesNullPointerException()
+	{
+		// setup
+		stub.exception = new NullPointerException();
+
+		//exercise
+		try
+		{
+			service.numberOfArticles();
+			Assert.fail();
+		}
+		catch (ServiceException e)
+		{
+			Assert.assertTrue(e.getCause() instanceof NullPointerException);
+		}
+	}
 
 	// TODO: public void testNumberOfArticles_TableException()
+	@Test
+	public void testNumberOfArticlesTableException()
+	{
+		stub.exception = new TableException();
+
+		try
+		{
+			service.numberOfArticles();
+			Assert.fail();
+		}
+		catch (ServiceException e)
+		{
+			Assert.assertTrue(e.getCause() instanceof TableException);
+		}
+	}
 }
