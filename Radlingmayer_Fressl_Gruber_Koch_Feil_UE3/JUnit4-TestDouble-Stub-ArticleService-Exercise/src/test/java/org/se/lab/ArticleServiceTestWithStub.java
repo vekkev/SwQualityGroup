@@ -35,7 +35,7 @@ public class ArticleServiceTestWithStub
 		Assert.assertEquals("Effective Java", a.getDescription());
 		Assert.assertEquals(3495, a.getPrice());
 	}
-	
+
 	@Test
 	public void testAddArticleTableException()
 	{
