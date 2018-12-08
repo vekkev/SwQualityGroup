@@ -35,8 +35,7 @@ public class ArticleServiceTestWithStub
 		Assert.assertEquals("Effective Java", a.getDescription());
 		Assert.assertEquals(3495, a.getPrice());
 	}
-
-	// TODO: public void testAddArticle_TableException()
+	
 	@Test
 	public void testAddArticleTableException()
 	{
@@ -72,8 +71,7 @@ public class ArticleServiceTestWithStub
 		// verify
 		Assert.assertEquals(3, number);		
 	}		
-	
-	// TODO: public void testNumberOfArticles_NullPointerException()
+
 	@Test
 	public void testNumberOfArticlesNullPointerException()
 	{
@@ -92,7 +90,6 @@ public class ArticleServiceTestWithStub
 		}
 	}
 
-	// TODO: public void testNumberOfArticles_TableException()
 	@Test
 	public void testNumberOfArticlesTableException()
 	{
