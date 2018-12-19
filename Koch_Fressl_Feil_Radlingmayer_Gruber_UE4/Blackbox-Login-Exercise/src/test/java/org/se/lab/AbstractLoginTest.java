@@ -1,6 +1,14 @@
 package org.se.lab;
 
-public class AbstractLoginTest {
+import org.junit.*;
 
+public abstract class AbstractLoginTest {
 
+    LoginService loginService;
+
+    @Before
+    public void setup()
+    {
+        loginService = new LoginService();
+    }
 }
