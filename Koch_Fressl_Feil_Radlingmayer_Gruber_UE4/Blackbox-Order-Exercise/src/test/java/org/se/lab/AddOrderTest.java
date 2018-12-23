@@ -74,10 +74,10 @@ public class AddOrderTest
 		fullTestCases.put(new TestParameters(0,99), new IllegalArgumentException("Wrong quantity: 0"));
 		fullTestCases.put(new TestParameters(11,99), new IllegalArgumentException("Wrong quantity: 11"));
 
-		runTestCases(fullTestCases);
+		runOrderTestCases(fullTestCases);
 	}
 
-	public void runTestCases(Map<TestParameters, IllegalArgumentException> testCases)
+	public void runOrderTestCases(Map<TestParameters, IllegalArgumentException> testCases)
 	{
 		for( TestParameters params : testCases.keySet())
 		{
